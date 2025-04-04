@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-blue-500 flex flex-col items-center justify-center min-h-screen">
+    <div class="app-wrap bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <header class="flex flex-col items-center">
+            <input type="text" id="search-box" class="search-box p-2 w-full border rounded-md" placeholder="Search for a city...">
+            <button id="search-btn" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded">Search</button>
+            <button id="location-btn" class="mt-2 bg-green-600 text-white px-4 py-2 rounded">Use My Location</button>
+        </header>
+        
+        <main class="mt-6 text-center">
+            <section class="location">
+                <div class="city text-2xl font-bold">City, Country</div>
+                <div class="date text-gray-600">Date</div>
+            </section>
+            
+            <div class="current mt-4">
+                <img id="weather-icon" src="" alt="Weather Icon" class="mx-auto w-20 h-20">
+                <div class="temp text-5xl font-bold">--°C</div>
+                <div class="weather text-xl">Weather</div>
+                <div class="hi-low text-gray-700">--°C / --°C</div>
+            </div>
+
+            <section id="forecast" class="mt-6 grid grid-cols-5 gap-2">
+                <!-- 5-day forecast will be added dynamically -->
+            </section>
+        </main>
+
+        <div id="error-message" class="text-red-600 mt-2 hidden">Invalid location. Please try again.</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.app-wrap {
+  max-width: 400px;
+  text-align: center;
+}
